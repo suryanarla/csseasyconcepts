@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions</title>
+    <style>
+        /* position: static - it is defaut position */
+       div{
+           border: 5px solid red;
+           background-color: yellow;
+           margin-top: 40px;
+           position:static;
+       }
+
+       .one{
+           background: blue;
+           color: white;
+           /* that particular one will remove remaining will there positions only  */
+           /* position: relative; */
+           /* top: 100px; */
+           /* top: 500px; */
+           /* left: 10px; */
+           /* left:40px; */
+           /* right: 30%; */
+           /* bottom: 2rem; */
+           /* bottom: 4em; */
+       }
+       .two{
+           background: green;
+           color: white;
+       }
+       .special{
+           background: lightcoral;
+           font-size: 32px;
+           position: absolute;
+           /* bottom: 10px; */
+           right: 10px;
+           top: 10px;
+       }
+    </style>
+</head>
+<body>
+<div>
+    <p class="one">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos alias accusantium mollitia dicta quam! Fuga enim illum sunt voluptatem omnis.</p>
+    <p class="two">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et doloremque fugit unde repellendus illo aspernatur, a, libero tempora enim deleniti, expedita illum quisquam quia dolore!
+        <span class="special">Hey Im absolute</span>
+    </p>
+
+</div>
+</body>
+</html>

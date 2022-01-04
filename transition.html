@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* transition:change over time
+        transition-property
+        transition-duration
+        transition-delay */
+        div{
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+        }
+        div:hover{
+            background-color: black;
+        }
+        .one{
+            background-color: blue;
+        }
+        .two{
+            background-color: green;
+        }
+        .three{
+            background-color: red;
+            /* slowly changes the background
+            color to black */
+            transition-property: background,border-radius;
+            /* 3s-background, 8s-border-radius */
+            transition-duration: 3s,8s;
+            /* if you give single value both are take that value */
+            transition-duration: 4s;
+            /* to apply styles delay time */
+            transition-delay: 5s;
+            /* we can apply all the styles in one line */
+            /* transition:transition-property transition-duration transition-delay(optional)*/
+            transition: background 8s 3s,  border-radius 5s 5s;
+            
+             /* if all properties same time means */
+             transition: all 3s;
+        }
+        .three:hover{
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    
+</body>
+</html>

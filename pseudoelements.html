@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* we can add html data in css */
+        /* pseudo content is manadatory */
+        p::before{
+            content: "starting ";
+            font-weight: bold;
+            color: red;
+            font-size: 2rem;
+            display: block;
+            background-color: rosybrown;
+
+        }
+
+
+
+        p::after{
+            content: "";
+            display: block;
+            width: 50px;
+            height: 50px;
+            background: orangered;
+            border-radius: 50%;
+        }
+
+        div{
+            width: 60vw;
+            margin:100px auto;
+            border: 2px solid red;
+            position: relative;
+            height: 30vh;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        /* img before will not work */
+
+        /* img::before{
+            content: "hello";
+        } */
+
+        
+        div::before{
+            content: "";
+            border: 2px solid grey;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            box-sizing: border-box;
+            top: -40px;
+            left: -50px;
+            z-index: -2;
+
+        }
+
+        div::after{
+            content: "";
+            background: grey;
+            border: 2px solid grey;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            box-sizing: border-box;
+            top: -25px;
+            left: -25px;
+            z-index: -1;
+        }
+
+        /* p::after{
+            content: " Ending";
+            font-weight: bold;
+            color: red;
+            font-size: 2rem;
+
+        } */
+    </style>
+</head>
+<body>
+    <p>Before and after pseudo elements</p>
+    <div>
+        <img src="./laptop.jfif" alt="">
+    </div>
+</body>
+</html>
